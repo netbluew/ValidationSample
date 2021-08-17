@@ -13,7 +13,7 @@ import static java.lang.annotation.RetentionPolicy.RUNTIME;
 @Retention(RUNTIME)
 @Constraint(validatedBy = MetropolitanCityValidation.class)
 @Documented
-public @interface MetropolitanCity{
+public @interface MetropolitanCity {
     String message() default "City is not allowed";
 
     Class<?>[] groups() default {};
@@ -23,7 +23,7 @@ public @interface MetropolitanCity{
     @Target({METHOD, FIELD, ANNOTATION_TYPE, CONSTRUCTOR, PARAMETER})
     @Retention(RUNTIME)
     @Documented
-    @interface List{
+    @interface List {
         MetropolitanCity[] value();
     }
 }
